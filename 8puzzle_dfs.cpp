@@ -193,7 +193,7 @@ int main()
 		}
 		float time_taken = float( clock () - begin_time ) /  CLOCKS_PER_SEC;
 		cout<<"Time taken: "<<time_taken<<endl;
-
+		cout<<"Size of closed list: "<<closed.size()<<endl;
 	}	
 	else
 		cout<<"Failure\n";
