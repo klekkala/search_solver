@@ -183,6 +183,8 @@ int main()
 {
 	struct state start, goal;
 	int i,j;
+
+	cin>> "Enter the start/inital state";
 	for (i=0;i<3;i++)
 	{
 		for(j=0;j<3;j++)
@@ -195,6 +197,7 @@ int main()
 			}	
 		}
 	}
+	cin>> "Enter the goal/final state";
 	for (i=0;i<3;i++)
 	{
 		for(j=0;j<3;j++)
