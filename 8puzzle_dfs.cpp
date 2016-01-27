@@ -3,6 +3,7 @@
 #include <queue>
 #include <cstdio>
 #include <cstdlib>
+#include <ctime>
 using namespace std;
 
 /*This is a program to go from a start state of an 8-Puzzle problem to a goal state through DFS.
@@ -169,10 +170,11 @@ int main()
 			cin>>goal.matrix[i][j];
 	}
 
+	const clock_t begin_time = clock();
 	open.push(start);
 	if( dfs(start, goal) == 1 )
 	{
-		cout<<"Success\n";
+		cout<<"Success\nPath\n";
 		queue<struct state> closed_copy;
 		closed_copy = closed;
 		struct state temp;
@@ -187,8 +189,11 @@ int main()
 					cout<<temp.matrix[i][j]<<' ';
 				cout<<endl;
 			}
-			cout<<"\n\n";
+			cout<<"\n";
 		}
+		float time_taken = float( clock () - begin_time ) /  CLOCKS_PER_SEC;
+		cout<<"Time taken: "<<time_taken<<endl;
+
 	}	
 	else
 		cout<<"Failure\n";
