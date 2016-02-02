@@ -104,7 +104,7 @@ int move_up(struct state cur, struct state goal)
 		return 1;
 	}
 	return 0;
-	
+
 }
 
 void print(struct state temp){
@@ -162,10 +162,10 @@ int bfs(struct state goal)
 	if (moved == 1)
 	{
 		flag=1;
-	}	
+	}
 	moved = move_up(cur, goal);
 	if(moved == 1)
-	{	
+	{
 		flag=1;
 		//return bfs (cur, goal);
 	}
@@ -192,7 +192,7 @@ int main()
 			{
 				start.blank_xloc = i;
 				start.blank_yloc = j;
-			}	
+			}
 		}
 	}
 	for (i=0;i<3;i++)
