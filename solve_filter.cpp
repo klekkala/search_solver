@@ -27,16 +27,14 @@ bool isSolvable(int puzzle[3][3])
 /* Driver progra to test above functions */
 int main()
 {
-  int puzzle[3][3] =  {{1, 8, 2},
-                      {0, 4, 3},  // Value 0 is used for empty space
-                      {7, 6, 5}};
-  if(isSolvable(puzzle)==1){
+  int puzzle[3][3];
     for(int i=0;i<3;i++){
       for(int j=0;j<3;j++){
-        printf("%d ", puzzle[i][j]);
+        scanf("%d", &puzzle[i][j]);
       }
-      printf("\n");
     }
+  if(isSolvable(puzzle)==1){
+   printf("Yes\n");
   }
   return 0;
 }
