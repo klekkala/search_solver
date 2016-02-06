@@ -4,7 +4,7 @@
 #include <cstdio>
 using namespace std;
 
-/*This is program to go from a start state of an 8-Puzzle problem to a goal state through DFS.
+/*This is a program to go from a start state of an 8-Puzzle problem to a goal state through BFS.
 Give input with space between each number and give input as 0 for the blank space*/
 
 int index=0;
@@ -133,7 +133,7 @@ int bfs(struct state goal)
 {
 	int flag=0;
 	getchar();
-	//check_cycle(cur);
+	if(check_cycle(cur);
 	//queue<struct state> Q;
 	struct state cur = closed.front();
 	print(cur);
@@ -203,9 +203,7 @@ int main()
 
 	closed.push(start);
 	if( bfs(goal) == 1 )
-		cout<<"Success\n";
-	else
-		cout<<"Failure\n";
+        printf("Success");
 
 	return 0;
 }
